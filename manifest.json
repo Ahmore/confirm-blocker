@@ -1,0 +1,19 @@
+{
+  "name": "Confirm blocker",
+  "description": "Confirm blocker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["http://lekkikurs.pl/*", "https://lekkikurs.pl/*"],
+      "run_at": "document_start",
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "script.js" ],
+      "matches": ["http://lekkikurs.pl/*", "https://lekkikurs.pl/*"]
+    }
+  ]
+}
